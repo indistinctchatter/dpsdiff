@@ -1,6 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <body>
-    <h1>This is DPS DIFF</h1>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Version comparison tool for visualising changes in collaborative typeface development.">
+
+  <title>spolu.store</title>
+  <!--link rel="stylesheet" type="text/css" href="css/stylesheet.css"-->
+  <!--script></script-->
+
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  /*@font-face {
+    font-family: 'DPS Supernormal';
+    src: url(../font/NeueHaasGrotDisp-45Light-Web.woff2) format('woff2');
+  }*/
+
+  html {
+    height: 100%;
+    font-size: 12px;
+    font-family: "DPS Supernormal", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+    line-height: 1.125;
+    font-kerning: normal;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  section {
+    float: left;
+    height: 33.3vh;
+  }
+
+  .caseAlts {
+    text-transform: uppercase;
+    font-kerning: normal;
+    -moz-font-feature-settings: 'case';
+    -webkit-font-feature-settings: 'case';
+    font-feature-settings: 'case';
+  }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <section style="background-color: #F00">
+      <p>
+        Sample text
+      </p>
+    </section>
+    <section style="background-color: #0F0">
+      <p>
+        Sample text
+      </p>
+    </section>
+    <section style="background-color: #00F">
+      <p>
+        Sample text
+      </p>
+    </section>
+  </div>
+</body>
 </html>
