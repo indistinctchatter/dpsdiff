@@ -129,7 +129,7 @@
     /*var url_string = "http://localhost:8080/t.html?a=/font/Inter2.1/Inter-UI-Regular.woff2&b=/font/Inter3.1.1/Inter-Regular.woff2";
     var url = new URL(url_string);*/
     var url_string = window.location.search.substring(1);
-    var url = parse_query_string(url_string);
+    var url = new URL(url_string);
     var a = url.searchParams.get("a");
     var b = url.searchParams.get("b");
     /*console.log(a);
@@ -172,5 +172,4 @@
     <input type="text" class="display new" id="new">
   </section>
 </body>
->>>>>>> Stashed changes
 </html>
