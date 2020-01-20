@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>diff.public.service</title>
-  <!--link rel="stylesheet" type="text/css" href="css/stylesheet.css"-->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!--jQueryLocal--><!--script src="js/jquery-3.4.1.min.js"></script-->
   <script src="js/jquery.inputfit.js"></script>
 
   <style>
@@ -43,29 +41,7 @@
   input[type="text"]
   {
     background: transparent;
-    /*border: none;*/
   }
-
-  /*.display {
-    padding: 0 2.5% 0 2.5%;
-    font-size: 25vh;
-    width: 95%;
-    height: 33vh;
-    vertical-align: baseline;
-  }*/
-
-  /*.versionInput {
-    position: absolute;
-    left: 50%;
-    margin-left: -5%;
-    width: 10%;
-    height: 2.5%;
-
-    padding: 0 10px 0 10px;
-    font-size: 12px;
-    vertical-align: baseline;
-    z-index: 2;
-  }*/
 
   .old {
     font-family: "Old";
@@ -110,13 +86,13 @@
       $('#old').mirror('#new, #blendOld, #blendNew');
       $('#new').mirror('#blendNew');
 
-      /* Inputfit: auto font-size for input */
+      /* jQuery auto font-size for input */
       $('#old').inputfit();
       $('#blendOld').inputfit();
       $('#blendNew').inputfit();
       $('#new').inputfit();
 
-      /*notes: keyup = oldVer resizes back; keydown = not resizing back*/
+      /*keyup = oldVer resizes back; keydown = none resizing back*/
       $(":input").on('keyup', function(){
         $('#oldVer').inputfit();
         $('#blendOld').inputfit();
@@ -126,9 +102,7 @@
     })
   </script>
   <script>
-    /*var url_string = "http://localhost:8080/t.html?a=/font/Inter2.1/Inter-UI-Regular.woff2&b=/font/Inter3.1.1/Inter-Regular.woff2";
-    var url = new URL(url_string);*/
-    var url_string = window.location.search.substring(1);
+    var url_string = window.location.href;
     var url = new URL(url_string);
     var a = url.searchParams.get("a");
     var b = url.searchParams.get("b");
@@ -156,7 +130,6 @@
 </head>
 <body>
   <section>
-    <!--input type="text" class="versionInput" id="inputOrigURL" placeholder="original URL"-->
     <input type="text" class="display old" id="old" placeholder="changed?">
   </section>
   <div id="blendWrapper">
@@ -168,7 +141,6 @@
     </div>
   </div>
   <section>
-    <!--input type="text" class="versionInput" id="inputNewURL" placeholder="version-to-commit URL"-->
     <input type="text" class="display new" id="new">
   </section>
 </body>
